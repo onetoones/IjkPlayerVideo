@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.administrator.ijkplayervideo"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    /*compile 'com.shuyu:GSYVideoPlayer:5.0.0-beta'*/
+ implementation 'com.shuyu:gsyVideoPlayer-java:5.0.0-beta'
+
+//根据你的需求
+    implementation 'com.shuyu:gsyVideoPlayer-armv5:5.0.0-beta'
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:5.0.0-beta'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:5.0.0-beta'
+    implementation 'com.shuyu:gsyVideoPlayer-x64:5.0.0-beta'
+    implementation 'com.shuyu:gsyVideoPlayer-x86:5.0.0-beta'
+    implementation 'com.hjm:BottomTabBar:1.1.1'
+    implementation 'com.facebook.fresco:fresco:0.11.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.7'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.youth.banner:banner:1.4.9'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'de.greenrobot:eventbus:3.0.0-beta1'
+    implementation 'com.android.support:design:26.1.0'
+
+
+}
